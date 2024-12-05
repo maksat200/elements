@@ -1,0 +1,49 @@
+.my-button {
+    min-width: 150px;
+    height: 40px;
+    background-color: green;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    font-size: 20px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.my-button:hover {
+    background: rgb(1, 66, 1);
+}
+
+.my-button--primary {
+
+    background: none;
+    border: 1px solid green;
+    color: green;
+}
+
+.my-button--bordered {
+    background: green;
+    border: none;
+    color: white;
+}
+
+.my-button--primary:hover {
+    background: rgb(131, 150, 131);
+    color: white;
+}
+
+.my-button--sm {
+    width: 20px;
+    height: 30px;
+}
+
+.my-button--md {
+    width: 50px;
+    height: 50px;
+}
+
+.my-button--lg {
+    width: 100px;
+    height: 100px;
+}
