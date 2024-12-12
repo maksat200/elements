@@ -1,49 +1,73 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
 .my-button {
-    min-width: 150px;
-    height: 40px;
-    background-color: green;
+    display: inline-block;
+    padding: 0.6em 1.2em;
     border-radius: 8px;
-    border: none;
-    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
     cursor: pointer;
-
-    font-size: 20px;
-    transition: background-color 0.1s ease-in-out;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    user-select: none;
+    margin: 0.5em; 
 }
-
-.my-button:hover {
-    background: rgb(1, 66, 1);
-}
-
 .my-button--primary {
-
-    background: none;
-    border: 1px solid green;
-    color: green;
-}
-
-.my-button--bordered {
-    background: green;
-    border: none;
+    background: #006FEE ; 
     color: white;
+    border: none;
 }
 
 .my-button--primary:hover {
-    background: rgb(131, 150, 131);
-    color: white;
+    background: #024694 ; 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.my-button--bordered {
+    background: white;
+    color: #006FEE ;
+    border: 2px solid #006FEE ;
+    box-shadow: none;
+}
+
+.my-button--bordered:hover {
+    background: white;
+    color: #024694;
+    transform: translateY(-2px);
+    border-color: #024694;
 }
 
 .my-button--sm {
-    width: 20px;
-    height: 30px;
+    padding: 0.4em 0.8em;
+    font-size: 0.875rem;
 }
 
 .my-button--md {
-    width: 50px;
-    height: 50px;
+    padding: 0.6em 1.2em;
+    font-size: 1rem;
 }
 
 .my-button--lg {
-    width: 100px;
-    height: 100px;
+    padding: 0.8em 1.6em;
+    font-size: 1.25rem;
+}
+
+
+.my-button--disabled {
+    background: white;
+    color: gray;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+.my-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
