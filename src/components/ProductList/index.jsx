@@ -5,11 +5,11 @@ function ProductList({ products }) {
   return (
     <div className="product-list">
       {products.map((product) => (
-        <div className="product-card" key={product.id}>
-          <img src={product.image} alt={product.title} />
-          <h3>{product.title}</h3>
-          <p>{product.category}</p>
-          <p>${product.price}</p>
+        <div key={product.id} className="product">
+            <img src={product.image} alt={product.title} />
+            <d className="blue">{product.category}</d>
+            <h2>{product.title}</h2>
+    <p className="price">${product.price}</p>
         </div>
       ))}
     </div>

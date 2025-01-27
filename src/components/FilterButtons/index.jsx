@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 
 function FilterButtons({ category, onFilter }) {
-  const categories = ["all", "Men's Clothing", "Women's Clothing", "Electronics", "Jewelery"];
+  const categories = ["all", "men's clothing", "women's clothing", "electronics", "jewelery"]; 
 
   return (
     <div className="filter-buttons">

@@ -14,27 +14,26 @@ function Container() {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
-        setFilteredProducts(data);
-        setLoading(false);
+        setFilteredProducts(data); 
+        setLoading(false); 
       })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setLoading(false);
-      });
   }, []);
 
+  
   const filterProducts = (category) => {
-    setCategory(category);
+    setCategory(category); 
     if (category === "all") {
-      setFilteredProducts(products);
+      setFilteredProducts(products); 
     } else {
-      setFilteredProducts(products.filter((product) => product.category === category));
+      
+      setFilteredProducts(
+        products.filter((product) => product.category.toLowerCase() === category.toLowerCase())
+      );
     }
   };
 
   return (
     <div className="container">
-      <h1>Product List</h1>
       <FilterButtons category={category} onFilter={filterProducts} />
       {loading ? <Spinner /> : <ProductList products={filteredProducts} />}
     </div>
